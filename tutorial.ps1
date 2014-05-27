@@ -1,5 +1,15 @@
 #Commenct is begin from "#"
 
+#Load Assenmly
+$config_path = "C:\app.config"
+[System.AppDomain]::CurrentDomain.SetData("APP_CONFIG_FILE", $config_path)
+
+#Load .NET Framework Assenmbly
+Add-Type -AssemblyName System.Configuration
+
+#Load External dll
+Add-Type -Path "C:\lib\hoge.dll"
+
 #Console out
 write-host("begin powershell tutorial")
 
