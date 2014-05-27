@@ -48,6 +48,8 @@ if(-not $hash.Contains("a")){
 try {
     # Process
 } catch [Exception] {
+    write-host $_.Exception.ToString()
+    write-host $error
     # Handle error
 } finally {
     # Closing process
