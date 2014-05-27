@@ -44,6 +44,15 @@ if(-not $hash.Contains("a")){
     write-host("element a is still remain");
 }
 
+# Handle exception
+try {
+    # Process
+} catch [Exception] {
+    # Handle error
+} finally {
+    # Closing process
+}
+
 #function
 write-host( plus 1 3 )
 write-host( minus 5 1)
@@ -54,5 +63,4 @@ function minus(){
     param([int]$x, [int]$y)
     return $x - $y;
 }
-
 
